@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.row-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.colums-flex-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.colums-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.heading {
+    color: rgba(56, 65, 111);
+    font-size: 25px;
+}
+
+.highlight {
+    color: rgba(102, 125, 255, 0.5);
+}
+
+
+nav {
+    padding: 10px 25px;
+    background-color: rgba(59, 130, 246, 0.15);
+}
+
+nav > ul {
+    height: 10vh;
+}
+
+.nav-links-list{
+    width: 25%;
+    padding: 2px;
+}
+.nav-links {
+    border: 2px solid rgba(102, 125, 255);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav-links:hover{
+    background-color: rgb(50, 79, 241);
+    color: #FFF;
+}
+
+main {
+    background-image: url("./bg.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: auto;
+    padding: 5px 0px;
+}
+
+#welcome {
+    width: 50%;
+    min-height: 100px;
+    padding: 50px;
+}
+
+.welcome {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(50, 79, 241, 0.85);
+}
