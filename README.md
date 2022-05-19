@@ -21,7 +21,7 @@ PWA Material MAnagement Dashboard
 
 ## Authors
 
-👤 **Phelian23**
+👤 **Ritobroto Mukherjee**
 
 - GitHub: [RitobrotoMukherjee](https://github.com/RitobrotoMukherjee)
 
