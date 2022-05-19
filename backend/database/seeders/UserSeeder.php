@@ -18,15 +18,15 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'name' => 'Admin',
-                'email' => 'admin@booster.identy.in',
-                'password' => Hash::make('Admin@Booster$1'),
+                'email' => 'admin@mm.identy.in',
+                'password' => Hash::make('Admin@mm$1'),
                 'is_admin' => 1,
                 'login_id' => 'admin-1'
             ],
             [
                 'name' => 'Organization',
                 'contact_person' => 'Rito',
-                'email' => 'org@booster.identy.in',
+                'email' => 'org@mm.in',
                 'password' => Hash::make('OrgTest'),
                 'address' => 'ABCd',
                 'contact_no' => '8167270301',

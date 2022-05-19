@@ -15,7 +15,27 @@ return new class extends Migration
     {
         Schema::create('data_uploads', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('department_id');
+            $table->string('name', 100)->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
+            
+            $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('cascade');
+            
+            $table->foreign('category_id')
+                    ->references('id')
+                    ->on('categories')
+                    ->onDelete('cascade');
+            
+            $table->foreign('department_id')
+                    ->references('id')
+                    ->on('departments')
+                    ->onDelete('cascade');
         });
     }
 

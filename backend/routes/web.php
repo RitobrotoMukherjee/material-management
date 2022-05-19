@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [App\Http\Controllers\Auth\AdminLoginController::class, 'showLoginForm'])->name('home');
+Route::prefix('admin')->group(function () {
+    Route::post('login', [App\Http\Controllers\Auth\AdminLoginController::class, 'login'])->name('admin.login');
+    Route::middleware(['auth:web', 'admin'])->group(function () {
+        Route::post('logout', [App\Http\Controllers\Auth\AdminLoginController::class, 'logout'])->name('admin.logout');
+        Route::controller(UserController::class)->prefix('organization')->group(function () {
+            Route::get('list', 'list')->name('org.list');
+            Route::post('server-list', 'serverList')->name('org.server.list');
+            Route::get('add-edit/{id?}', 'getDetailById')->name('org.add.edit');
+            Route::post('save', 'upsert')->name('org.upsert');
+        });
+    });
 });
