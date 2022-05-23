@@ -10,4 +10,17 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+    protected $data, $today;
+    
+    public function __construct(){
+        $this->today = date('Y-m-d');
+    }
+    
+    protected function getStatus(): array {
+        return [
+            'Active' => 'Active',
+            'In active' => 'In Active'
+        ];
+    }
 }
